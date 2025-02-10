@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import LegalMentionsModal from '../LegalMentionsModal/LegalMentionsModal';
 import './Footer.css'
 
-const Footer = () => {
+const Footer = ({ onOpenModal }) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -31,7 +30,13 @@ const Footer = () => {
             transition={{ delay: 0.8 }}
             className="footer-nav"
           >
-            <LegalMentionsModal />
+            <motion.button
+              onClick={onOpenModal}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Mentions légales
+            </motion.button>
           </motion.nav>
         </div>
       </div>
