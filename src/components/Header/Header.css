@@ -1,0 +1,27 @@
+.header {
+  background: transparent; /* Fond transparent pour un look moderne */
+  color: #333; /* Texte gris foncé */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.header a:hover {
+  color: #0071e3; /* Bleu au survol */
+  text-decoration: underline;
+}

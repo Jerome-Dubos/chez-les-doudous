@@ -1,0 +1,172 @@
+/* Style du bouton d'ouverture */
+.open-modal-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #86868b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.open-modal-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Overlay de la modale */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 2rem;
+}
+
+/* Contenu de la modale */
+.modal-content {
+  background: rgba(28, 28, 30, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Titre de la modale */
+.modal-content h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Table des mentions légales */
+.legal-mentions-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+}
+
+.legal-mentions-table th,
+.legal-mentions-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.legal-mentions-table th {
+  width: 40%;
+  color: #86868b;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.legal-mentions-table td {
+  font-size: 0.9rem;
+}
+
+.legal-mentions-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Bouton de fermeture (croix) */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #86868b;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Bouton de fermeture (en bas) */
+.close-modal-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 2rem auto 0;
+  min-width: 150px;
+}
+
+.close-modal-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Customisation de la scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .legal-mentions-table th,
+  .legal-mentions-table td {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,110 @@
+.footer {
+  width: 100%;
+  background: rgba(28, 28, 30, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem 0;
+  color: #86868b;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #86868b;
+  transition: color 0.3s ease;
+}
+
+.footer p:hover {
+  color: #fff;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Style du bouton des mentions légales */
+.footer button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #86868b;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.footer button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer button:active {
+  transform: translateY(0);
+}
+
+/* Effets de glassmorphisme pour le footer */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 28, 30, 0.3) 0%,
+    rgba(28, 28, 30, 0.8) 100%
+  );
+  z-index: -1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer button {
+    width: 80%;
+    max-width: 300px;
+  }
+}

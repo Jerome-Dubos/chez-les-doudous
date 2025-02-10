@@ -1,0 +1,143 @@
+[
+    {
+      "category": "Entrée",
+      "name": "Salade César",
+      "description": "Salade fraîche avec poulet grillé et sauce César.",
+      "imageUrl": "/images/gallery/CeasarSalad.webp",
+      "altText": "Salade César"
+    },
+    {
+      "category": "Entrée",
+      "name": "Soupe à l'oignon",
+      "description": "Soupe chaude à l'oignon, gratinée au fromage.",
+      "imageUrl": "/images/gallery/soupe-oignon.webp",
+      "altText": "Soupe à l'oignon"
+    },
+    {
+      "category": "Entrée",
+      "name": "Tartare de saumon",
+      "description": "Tartare de saumon frais avec avocat et citron.",
+      "imageUrl": "/images/gallery/tartare-saumon.webp",
+      "altText": "Tartare de saumon"
+    },
+    {
+      "category": "Entrée",
+      "name": "Bruschetta à la tomate",
+      "description": "Pain grillé avec tomates fraîches, basilic et mozzarella.",
+      "imageUrl": "/images/gallery/bruschetta.webp",
+      "altText": "Bruschetta à la tomate"
+    },
+    {
+      "category": "Entrée",
+      "name": "Quiche lorraine",
+      "description": "Quiche à la crème, lardons et fromage.",
+      "imageUrl": "/images/gallery/quiche.webp",
+      "altText": "Quiche lorraine"
+    },
+    {
+      "category": "Plat",
+      "name": "Filet de saumon",
+      "description": "Filet de saumon accompagné de légumes sautés.",
+      "imageUrl": "/images/gallery/filetsaumon.webp",
+      "altText": "Filet de saumon"
+    },
+    {
+      "category": "Plat",
+      "name": "Poulet rôti",
+      "description": "Poulet rôti avec herbes et légumes de saison.",
+      "imageUrl": "/images/gallery/poulet-roti.webp",
+      "altText": "Poulet rôti"
+    },
+    {
+      "category": "Plat",
+      "name": "Bœuf bourguignon",
+      "description": "Plat traditionnel à base de bœuf mijoté dans du vin rouge.",
+      "imageUrl": "/images/gallery/boeuf-bourguignon.webp",
+      "altText": "Bœuf bourguignon"
+    },
+    {
+      "category": "Plat",
+      "name": "Lasagnes",
+      "description": "Lasagnes maison avec viande, tomates et béchamel.",
+      "imageUrl": "/images/gallery/lasagnes.webp",
+      "altText": "Lasagnes"
+    },
+    {
+      "category": "Plat",
+      "name": "Risotto aux champignons",
+      "description": "Risotto crémeux aux champignons de saison.",
+      "imageUrl": "/images/gallery/risotto.webp",
+      "altText": "Risotto aux champignons"
+    },
+    {
+      "category": "Dessert",
+      "name": "Tarte aux fruits",
+      "description": "Tarte gourmande avec des fruits de saison.",
+      "imageUrl": "/images/gallery/tarte-fruits.webp",
+      "altText": "Tarte aux fruits"
+    },
+    {
+      "category": "Dessert",
+      "name": "Crème brûlée",
+      "description": "Crème vanillée avec une croûte de sucre caramélisé.",
+      "imageUrl": "/images/gallery/creme.webp",
+      "altText": "Crème brûlée"
+    },
+    {
+      "category": "Dessert",
+      "name": "Mousse au chocolat",
+      "description": "Mousse légère et onctueuse au chocolat noir.",
+      "imageUrl": "/images/gallery/mousse-chocolat.webp",
+      "altText": "Mousse au chocolat"
+    },
+    {
+      "category": "Dessert",
+      "name": "Profiteroles",
+      "description": "Choux garnis de crème pâtissière et nappés de chocolat.",
+      "imageUrl": "/images/gallery/profiteroles.webp",
+      "altText": "Profiteroles"
+    },
+    {
+      "category": "Dessert",
+      "name": "Tiramisu",
+      "description": "Dessert italien à base de mascarpone, café et cacao.",
+      "imageUrl": "/images/gallery/tiramisu.webp",
+      "altText": "Tiramisu"
+    },
+    {
+      "category": "Buffet",
+      "name": "Buffet froid",
+      "description": "Assortiment de charcuteries et fromages.",
+      "imageUrl": "/images/gallery/buffet-froid.webp",
+      "altText": "Buffet froid"
+    },
+    {
+      "category": "Buffet",
+      "name": "Salades composées",
+      "description": "Assortiment de salades fraîches et variées.",
+      "imageUrl": "/images/gallery/salades-composees.webp",
+      "altText": "Salades composées"
+    },
+    {
+      "category": "Buffet",
+      "name": "Canapés variés",
+      "description": "Petits canapés garnis de différentes spécialités.",
+      "imageUrl": "/images/gallery/canapes-varies.webp",
+      "altText": "Canapés variés"
+    },
+    {
+      "category": "Buffet",
+      "name": "Mini quiches",
+      "description": "Mini quiches avec divers ingrédients comme lardons, fromage, légumes.",
+      "imageUrl": "/images/gallery/mini-quiches.webp",
+      "altText": "Mini quiches"
+    },
+    {
+      "category": "Buffet",
+      "name": "Plateau de fruits frais",
+      "description": "Un assortiment de fruits frais et de saison.",
+      "imageUrl": "/images/gallery/plateau-fruits.webp",
+      "altText": "Plateau de fruits frais"
+    }
+  ]
+  

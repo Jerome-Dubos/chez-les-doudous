@@ -1,0 +1,86 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem 4rem;  /* Augmentation du padding horizontal */
+  border-radius: 30px;  /* Bordures plus arrondies */
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;  /* Hauteur réduite */
+  font-size: 1.2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  letter-spacing: 0.5px;  /* Espacement des lettres pour plus d'élégance */
+  font-weight: 400;  /* Police plus fine */
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet de brillance subtil */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: all 0.75s ease;  /* Animation plus lente */
+}
+
+.card:hover::before {
+  left: 200%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cards {
+    padding: 0 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .card {
+    padding: 1.5rem 3rem;
+    min-height: 80px;
+  }
+}
