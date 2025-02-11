@@ -113,23 +113,22 @@ const Gallery = () => {
               layoutId={selectedItem.name}
               onClick={e => e.stopPropagation()}
             >
-              <img 
+              <motion.img 
                 src={selectedItem.imageUrl} 
                 alt={selectedItem.altText}
                 className="modal-image"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
               />
-              <div className="modal-info">
-                <h2>{selectedItem.name}</h2>
-                <p>{selectedItem.description}</p>
-                <motion.button 
-                  className="close-button"
-                  onClick={() => setSelectedItem(null)}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  Fermer
-                </motion.button>
-              </div>
+              <motion.button 
+                className="close-button"
+                onClick={() => setSelectedItem(null)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Fermer
+              </motion.button>
             </motion.div>
           </motion.div>
         )}

@@ -50,23 +50,37 @@ const ReservationContact = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <div className="info-card">
+          <a 
+            href="tel:+33668024548" 
+            className="info-card"
+            style={{ textDecoration: 'none' }}
+          >
             <Phone className="info-icon" />
             <h3>Téléphone</h3>
             <p>+33 6 68 02 45 48</p>
-          </div>
+          </a>
 
-          <div className="info-card">
+          <a 
+            href="mailto:chezlesdoudous.traiteur@gmail.com"
+            className="info-card"
+            style={{ textDecoration: 'none' }}
+          >
             <Mail className="info-icon" />
             <h3>Email</h3>
             <p>chezlesdoudous.traiteur@gmail.com</p>
-          </div>
+          </a>
 
-          <div className="info-card">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Rue+des+Alouettes+67460+Souffelweyersheim"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="info-card"
+            style={{ textDecoration: 'none' }}
+          >
             <MapPin className="info-icon" />
             <h3>Adresse</h3>
             <p>Rue des Alouettes<br />67460 Souffelweyersheim</p>
-          </div>
+          </a>
         </motion.section>
 
         <ContactForm ref={formRef} onSubmit={handleSubmit} messageSent={messageSent} />

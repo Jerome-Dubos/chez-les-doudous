@@ -81,23 +81,47 @@ h1 {
 }
 
 .card {
+  position: relative;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  word-wrap: break-word;
+  hyphens: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  color: #fff;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1.5rem;
-  border-radius: 15px;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  word-wrap: break-word;
-  hyphens: auto;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.card span {
+  position: relative;
+  z-index: 1;
 }
 
 .card:hover {
+  transform: translateY(-5px);
+}
+
+.card:hover::before {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .testimonials-container {

@@ -1,0 +1,34 @@
+{
+    "testimonials": [
+      {
+        "quote": "Une cuisine authentique et raffinée qui sublime chaque événement",
+        "author": "Marie L.",
+        "event": "Mariage",
+        "date": "Juin 2023"
+      },
+      {
+        "quote": "Service impeccable et mets délicieux. Nos invités étaient ravis !",
+        "author": "Thomas B.",
+        "event": "Séminaire d'entreprise",
+        "date": "Septembre 2023"
+      },
+      {
+        "quote": "Les saveurs étaient au rendez-vous, un vrai régal pour les papilles",
+        "author": "Sophie M.",
+        "event": "Anniversaire",
+        "date": "Novembre 2023"
+      },
+      {
+        "quote": "Professionnalisme et qualité exceptionnelle, je recommande vivement",
+        "author": "Laurent P.",
+        "event": "Gala",
+        "date": "Décembre 2023"
+      },
+      {
+        "quote": "Une équipe à l'écoute qui a su s'adapter à nos besoins",
+        "author": "Émilie D.",
+        "event": "Baptême",
+        "date": "Janvier 2024"
+      }
+    ]
+  }

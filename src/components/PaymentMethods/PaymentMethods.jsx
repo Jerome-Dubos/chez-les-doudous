@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { CreditCard, Banknote, Building2, Wifi, Apple } from 'lucide-react';
 import './PaymentMethods.css';
@@ -11,16 +11,18 @@ const iconMap = {
   Apple: <Apple className="payment-icon" />
 };
 
+const paymentMethods = [
+  { icon: "CreditCard", name: "AMEX" },
+  { icon: "Building2", name: "Virement bancaire" },
+  { icon: "Banknote", name: "Espèces" },
+  { icon: "CreditCard", name: "Chèque" },
+  { icon: "Wifi", name: "Paiement sans contact" },
+  { icon: "CreditCard", name: "MasterCard" },
+  { icon: "CreditCard", name: "VISA" },
+  { icon: "Apple", name: "Apple Pay" }
+];
+
 const PaymentMethods = () => {
-  const [methods, setMethods] = useState([]);
-
-  useEffect(() => {
-    fetch('/data/paymentMethods.json')
-      .then((response) => response.json())
-      .then((data) => setMethods(data))
-      .catch((error) => console.error('Erreur lors du chargement des méthodes de paiement:', error));
-  }, []);
-
   return (
     <motion.section 
       className="payment-methods"
@@ -30,9 +32,9 @@ const PaymentMethods = () => {
     >
       <h2>Options de paiement disponibles</h2>
       <div className="methods-grid">
-        {methods.map((method, index) => (
+        {paymentMethods.map((method, index) => (
           <motion.div 
-            key={method.name}
+            key={`${method.name}-${index}`}
             className="method-card"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

@@ -4,49 +4,27 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Home.css';
 
-const testimonials = [
-  {
-    quote: "Une cuisine authentique et raffinée qui sublime chaque événement",
-    author: "Marie L.",
-    event: "Mariage",
-    date: "Juin 2023"
-  },
-  {
-    quote: "Service impeccable et mets délicieux. Nos invités étaient ravis !",
-    author: "Thomas B.",
-    event: "Séminaire d'entreprise",
-    date: "Septembre 2023"
-  },
-  {
-    quote: "Les saveurs étaient au rendez-vous, un vrai régal pour les papilles",
-    author: "Sophie M.",
-    event: "Anniversaire",
-    date: "Novembre 2023"
-  },
-  {
-    quote: "Professionnalisme et qualité exceptionnelle, je recommande vivement",
-    author: "Laurent P.",
-    event: "Gala",
-    date: "Décembre 2023"
-  },
-  {
-    quote: "Une équipe à l'écoute qui a su s'adapter à nos besoins",
-    author: "Émilie D.",
-    event: "Baptême",
-    date: "Janvier 2024"
-  }
-];
-
 const Home = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
+    // Charger les témoignages depuis le fichier JSON
+    fetch('/data/testimonials.json')
+      .then(response => response.json())
+      .then(data => setTestimonials(data.testimonials))
+      .catch(error => console.error('Erreur lors du chargement des témoignages:', error));
+  }, []);
+
+  useEffect(() => {
+    if (testimonials.length === 0) return;
+
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Change toutes les 5 secondes
+    }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   return (
     <div className="home">
@@ -70,57 +48,59 @@ const Home = () => {
           Des plats raffinés préparés avec passion pour vos événements.
         </p>
 
-        <motion.div className="cards">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link to="/menu" className="card">Découvrir le Menu</Link>
-          </motion.div>
+        <div className="cards">
+          <Link to="/menu" className="card">
+            <span>Découvrir le Menu</span>
+          </Link>
 
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link to="/gallery" className="card">Explorer la Galerie</Link>
-          </motion.div>
+          <Link to="/gallery" className="card">
+            <span>Explorer la Galerie</span>
+          </Link>
 
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link to="/contact" className="card">Contact & Réservations</Link>
-          </motion.div>
+          <Link to="/contact" className="card">
+            <span>Contact & Réservations</span>
+          </Link>
 
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link to="/about" className="card">Notre Histoire</Link>
-          </motion.div>
-        </motion.div>
-
-        <div className="testimonials-container">
-          <AnimatePresence mode='wait'>
-            <motion.div 
-              key={currentTestimonial}
-              className="testimonial"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-            >
-              <blockquote>
-                "{testimonials[currentTestimonial].quote}"
-              </blockquote>
-              <cite>
-                - {testimonials[currentTestimonial].author} 
-                <span className="event-details">
-                  {testimonials[currentTestimonial].event}, {testimonials[currentTestimonial].date}
-                </span>
-              </cite>
-            </motion.div>
-          </AnimatePresence>
-          
-          <div className="testimonial-dots">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentTestimonial ? 'active' : ''}`}
-                onClick={() => setCurrentTestimonial(index)}
-                aria-label={`Témoignage ${index + 1}`}
-              />
-            ))}
-          </div>
+          <Link to="/about" className="card">
+            <span>Notre Histoire</span>
+          </Link>
         </div>
+
+        {testimonials.length > 0 && (
+          <div className="testimonials-container">
+            <AnimatePresence mode='wait'>
+              <motion.div 
+                key={currentTestimonial}
+                className="testimonial"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+              >
+                <blockquote>
+                  "{testimonials[currentTestimonial].quote}"
+                </blockquote>
+                <cite>
+                  - {testimonials[currentTestimonial].author} 
+                  <span className="event-details">
+                    {testimonials[currentTestimonial].event}, {testimonials[currentTestimonial].date}
+                  </span>
+                </cite>
+              </motion.div>
+            </AnimatePresence>
+            
+            <div className="testimonial-dots">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  className={`dot ${index === currentTestimonial ? 'active' : ''}`}
+                  onClick={() => setCurrentTestimonial(index)}
+                  aria-label={`Témoignage ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </motion.div>
     </div>
   );
