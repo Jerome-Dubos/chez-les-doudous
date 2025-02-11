@@ -1,86 +1,228 @@
+/* Home.css */
+.home {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #fff 0%, #f5f5f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #f5f5f7;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #f5f5f7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 1200px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-  padding: 0 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
 }
 
 .card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 2rem 4rem;  /* Augmentation du padding horizontal */
-  border-radius: 30px;  /* Bordures plus arrondies */
+  padding: 1.5rem;
+  border-radius: 15px;
   text-align: center;
   color: #fff;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100px;  /* Hauteur réduite */
-  font-size: 1.2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
-  letter-spacing: 0.5px;  /* Espacement des lettres pour plus d'élégance */
-  font-weight: 400;  /* Police plus fine */
 }
 
 .card:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Effet de brillance subtil */
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  transform: skewX(-25deg);
-  transition: all 0.75s ease;  /* Animation plus lente */
+.testimonial {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.card:hover::before {
-  left: 200%;
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #f5f5f7;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .cards {
-    padding: 0 1rem;
-  }
-  
-  .card {
-    padding: 1.5rem 3rem;
-  }
+.testimonial cite {
+  color: #f5f5f7;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
-    max-width: 400px;
+  h1 {
+    font-size: 2.5rem;
   }
 
-  .card {
-    padding: 1.5rem 3rem;
-    min-height: 80px;
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .testimonial {
+    padding: 1.5rem;
+  }
+}
+
+/* Ajoutez ces styles à votre Home.css */
+
+.testimonials-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 200px;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: 1rem;
+}
+
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #f5f5f7;
+  line-height: 1.6;
+}
+
+.testimonial cite {
+  color: #f5f5f7;
+  opacity: 0.8;
+  display: block;
+  font-size: 1rem;
+}
+
+.event-details {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    padding: 1.5rem;
+  }
+
+  .testimonial blockquote {
+    font-size: 1rem;
+  }
+
+  .event-details {
+    font-size: 0.8rem;
   }
 }

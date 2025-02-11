@@ -1,0 +1,65 @@
+.payment-methods {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .payment-methods h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .methods-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .method-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .method-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .payment-icon {
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 1rem;
+  }
+  
+  .method-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .method-card p {
+    color: #f5f5f7;
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    .payment-methods {
+      padding: 1.5rem;
+    }
+    
+    .payment-methods h2 {
+      font-size: 1.2rem;
+    }
+    
+    .method-card {
+      padding: 1rem;
+    }
+  }

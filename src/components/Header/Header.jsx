@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import './Header.css'
+import './Header.css';
 
 const Header = () => {
   const location = useLocation();
   
   const menuItems = [
     { path: '/', label: 'Accueil' },
-    { path: '/menu', label: 'Menu' },
     { path: '/gallery', label: 'Galerie' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/contact', label: 'Réservation & Contact' }
   ];
 
   return (
