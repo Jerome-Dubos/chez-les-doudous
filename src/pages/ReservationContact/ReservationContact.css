@@ -1,94 +1,90 @@
 .reservation-contact {
-    min-height: 100vh;
-    padding: 100px 2rem 2rem;
-    background: #000;
-    color: #fff;
-  }
-  
-  .reservation-contact h1 {
-    text-align: center;
-    font-size: 3.5rem;
-    margin-bottom: 3rem;
-    background: linear-gradient(90deg, #fff, #f5f5f7);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
+  min-height: 100vh;
+  padding: 100px 2rem 2rem;
+  background: #000;
+  color: #fff;
+}
+
+.reservation-contact h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #fff, #f5f5f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.info-icon {
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.info-card p {
+  color: #f5f5f7;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.additional-info {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+@media (max-width: 968px) {
   .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto 4rem;
+    grid-template-columns: 1fr;
   }
-  
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+
+  .reservation-contact h1 {
+    font-size: 2.5rem;
   }
-  
+
+  .reservation-contact {
+    padding: 80px 1rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   .info-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    padding: 1.5rem;
   }
-  
-  .info-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .info-icon {
-    color: #fff;
-    width: 24px;
-    height: 24px;
-    margin-bottom: 1rem;
-  }
-  
-  .info-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-  }
-  
-  .info-card p {
-    color: #f5f5f7;
-    opacity: 0.8;
-    line-height: 1.6;
-  }
-  
-  .additional-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto 4rem;
-  }
-  
-  @media (max-width: 968px) {
-    .contact-grid,
-    .additional-info {
-      grid-template-columns: 1fr;
-    }
-  
-    .reservation-contact h1 {
-      font-size: 2.5rem;
-    }
-  
-    .reservation-contact {
-      padding: 80px 1rem 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .info-card {
-      padding: 1.5rem;
-    }
-  }
+}

@@ -1,10 +1,8 @@
-// ReservationContact.jsx
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { MapPin, Clock, CreditCard, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 import ContactForm from '../../components/ContactForm/ContactForm';
-import OpeningHours from '../../components/OpeningHours/OpeningHours';
 import PaymentMethods from '../../components/PaymentMethods/PaymentMethods';
 import AccessMap from '../../components/AccessMap/AccessMap';
 import './ReservationContact.css';
@@ -75,7 +73,6 @@ const ReservationContact = () => {
       </div>
 
       <div className="additional-info">
-        <OpeningHours />
         <PaymentMethods />
       </div>
 

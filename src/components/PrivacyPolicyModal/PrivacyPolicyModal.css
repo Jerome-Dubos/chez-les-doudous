@@ -1,0 +1,133 @@
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+  }
+  
+  /* Contenu de la modale */
+  .modal-content {
+    background: rgba(28, 28, 30, 0.95);
+    border-radius: 24px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 800px;
+    max-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow-y: auto;
+  }
+  
+  /* Titre */
+  .modal-content h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+  }
+  
+  /* Container du texte */
+  .policy-container {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .policy-container ul {
+    padding-left: 20px;
+    margin-top: 1rem;
+  }
+  
+  .policy-container li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Bouton de fermeture */
+  .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #86868b;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .close-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Scrollbar */
+  .policy-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .policy-container::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 4px;
+  }
+  
+  .policy-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: all 0.3s ease;
+  }
+  
+  .policy-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid transparent;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 2rem 1.5rem;
+      width: 95%;
+    }
+  
+    .modal-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .close-btn {
+      top: 1rem;
+      right: 1rem;
+      width: 28px;
+      height: 28px;
+      font-size: 20px;
+    }
+  }
+  

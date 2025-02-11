@@ -1,0 +1,38 @@
+[
+    {
+      "day": "Lundi",
+      "open": "08:00 – 19:00",
+      "kitchen": "14:00 – 19:00"
+    },
+    {
+      "day": "Mardi",
+      "open": "08:00 – 19:00",
+      "kitchen": "14:00 – 19:00"
+    },
+    {
+      "day": "Mercredi",
+      "open": "08:00 – 19:00",
+      "kitchen": "14:00 – 19:00"
+    },
+    {
+      "day": "Jeudi",
+      "open": "08:00 – 19:00",
+      "kitchen": "14:00 – 19:00"
+    },
+    {
+      "day": "Vendredi",
+      "open": "08:00 – 19:00",
+      "kitchen": "14:00 – 19:00"
+    },
+    {
+      "day": "Samedi",
+      "open": "08:00 – 16:00",
+      "kitchen": "14:00 - 16:00"
+    },
+    {
+      "day": "Dimanche",
+      "open": "Fermé",
+      "kitchen": ""
+    }
+  ]
+  

@@ -82,6 +82,10 @@ const Home = () => {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link to="/contact" className="card">Contact & Réservations</Link>
           </motion.div>
+
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link to="/about" className="card">Notre Histoire</Link>
+          </motion.div>
         </motion.div>
 
         <div className="testimonials-container">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import galleryData from '../../data/galleryData.json';
-import './Gallery.css';  // Au début du fichier avec les autres imports
+import galleryData from '../../data/GalleryData.json';
+import './Gallery.css';
 
 const Gallery = () => {
   const [images, setImages] = useState([]);

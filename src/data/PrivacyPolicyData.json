@@ -1,0 +1,27 @@
+{
+    "lastUpdate": "[DATE]",
+    "company": "Chez les Doudous",
+    "email": "chezlesdoudous.traiteur@gmail.com",
+    "address": "31 Rue des Alouettes, 67460 Souffelweyersheim, France",
+    "dataCollected": [
+      "Nom et prénom",
+      "Adresse e-mail",
+      "Numéro de téléphone",
+      "Informations relatives à l'événement (type, nombre d'invités, date, message)"
+    ],
+    "usage": [
+      "Répondre aux demandes de réservation",
+      "Fournir des informations sur les services du traiteur"
+    ],
+    "dataSharing": {
+      "thirdParties": [],
+      "soldOrRented": false
+    },
+    "dataRetention": "Les données sont utilisées uniquement pour répondre aux demandes et ne sont pas stockées au-delà du traitement de la demande.",
+    "userRights": [
+      "Droit d'accès et de rectification",
+      "Droit à l'effacement",
+      "Droit d'opposition et de limitation du traitement"
+    ],
+    "securityMeasures": "Les informations transmises via le formulaire ne sont ni partagées, ni vendues à des tiers."
+  }

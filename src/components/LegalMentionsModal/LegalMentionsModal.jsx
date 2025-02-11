@@ -4,24 +4,20 @@ import './LegalMentionsModal.css';
 
 const LegalMentionsModal = ({ isOpen, onClose }) => {
   const mentionsData = [
-    { label: "Nom de l'établissement", value: "CHEZ LES DOUDOUS" },
-    { label: "Nom et forme juridique", value: "CHEZ LES DOUDOUS" },
-    { label: "Prénom", value: "JEAN MAURICE" },
-    { label: "Nom", value: "TRAN" },
-    { label: "Adresse", value: "Rue des Alouettes" },
-    { label: "Code postal", value: "67460" },
-    { label: "Ville", value: "Souffelweyersheim" },
-    { label: "Pays", value: "FRANCE" },
-    { label: "Numéro de téléphone", value: "+33668024548" },
-    { label: "Adresse e-mail", value: "chezlesdoudous.traiteur@gmail.com" },
-    { label: "Inscription au registre", value: "X" },
-    { label: "Numéro d'enregistrement", value: "X" },
-    { label: "Numéro fiscal local", value: "X" },
-    { label: "Numéro de TVA", value: "X" },
-    { label: "Autorité de surveillance", value: "X" },
-    { label: "Numéro d'enregistrement autorité", value: "X" },
-    { label: "Responsable", value: "MR TRAN" },
-    { label: "Capital Social", value: "5000" }
+    { label: "Nom de l'établissement", value: "MAEL (CHEZ LES DOUDOUS)" },
+    { label: "Forme juridique", value: "Société à responsabilité limitée (SARL)" },
+    { label: "SIREN", value: "933 009 318" },
+    { label: "SIRET du siège social", value: "933 009 318 00017" },
+    { label: "Numéro TVA Intracommunautaire", value: "FR40 933 009 318" },
+    { label: "Code NAF/APE", value: "56.21Z (Services des traiteurs)" },
+    { label: "Adresse du siège social", value: "31 Rue des Alouettes, 67460 Souffelweyersheim, France" },
+    { label: "Capital social", value: "5 000 €" },
+    { label: "Date de création", value: "09/09/2024" },
+    { label: "Durée de l’entreprise", value: "99 ans" },
+    { label: "Exercice comptable", value: "Clôture au 31 décembre" },
+    { label: "Numéro EORI", value: "Pas de numéro valide" },
+    { label: "Hébergeur du site", value: "À compléter" },
+    { label: "Responsable légal", value: "À compléter" }
   ];
 
   return (

@@ -1,4 +1,4 @@
-.payment-methods {
+.services-highlight {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -8,25 +8,25 @@
   text-align: center;
 }
 
-.payment-methods h2 {
+.services-highlight h2 {
   color: #fff;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-.payment-methods h2 .highlight {
+.services-highlight h2 .highlight {
   color: #fff;
 }
 
-.methods-grid {
+.services-grid {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
-.method-card {
+.service-card {
   text-align: center;
   transition: all 0.3s ease;
   max-width: 180px;
@@ -35,10 +35,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 150px;
+  min-height: 200px;
 }
 
-.method-card:hover {
+.service-card:hover {
   transform: translateY(-5px);
 }
 
@@ -54,13 +54,13 @@
   box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
 }
 
-.payment-icon {
-  color: #666;
+.service-icon {
+  color: #ffc107;
   width: 50px;
   height: 50px;
 }
 
-.method-card h3 {
+.service-card h3 {
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
@@ -72,16 +72,16 @@
 }
 
 @media (max-width: 768px) {
-  .methods-grid {
+  .services-grid {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .method-card {
+  .service-card {
     max-width: 120px;
     flex: 1 1 120px;
-    min-height: 130px;
+    min-height: 160px;
   }
 
   .icon-container {
@@ -89,25 +89,25 @@
     height: 70px;
   }
 
-  .payment-icon {
+  .service-icon {
     width: 40px;
     height: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .payment-methods {
+  .services-highlight {
     padding: 1.5rem;
   }
 
-  .payment-methods h2 {
+  .services-highlight h2 {
     font-size: 1.5rem;
   }
 
-  .method-card {
+  .service-card {
     max-width: 100px;
     flex: 1 1 100px;
-    min-height: 120px;
+    min-height: 140px;
   }
 
   .icon-container {
@@ -115,7 +115,7 @@
     height: 60px;
   }
 
-  .payment-icon {
+  .service-icon {
     width: 30px;
     height: 30px;
   }

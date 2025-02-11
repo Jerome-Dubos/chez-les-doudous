@@ -1,0 +1,21 @@
+{
+    "lastUpdate": "[DATE]",
+    "company": "Chez les Doudous",
+    "email": "chezlesdoudous.traiteur@gmail.com",
+    "intellectualProperty": {
+      "description": "Tout le contenu de ce site, y compris les textes, images, logos et autres éléments graphiques, est la propriété exclusive de Chez les Doudous, sauf mention contraire.",
+      "restriction": "Toute reproduction, distribution ou utilisation du contenu sans autorisation écrite préalable est strictement interdite."
+    },
+    "rgpdCompliance": {
+      "description": "Chez Chez les Doudous, nous respectons vos droits en matière de protection des données personnelles.",
+      "rights": [
+        "Droit d'accès",
+        "Droit de rectification",
+        "Droit à l'effacement",
+        "Droit à la limitation du traitement"
+      ],
+      "contact": "Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : chezlesdoudous.traiteur@gmail.com.",
+      "dataRetention": "Nous ne stockons pas vos informations personnelles au-delà du traitement de votre demande."
+    }
+  }
+  

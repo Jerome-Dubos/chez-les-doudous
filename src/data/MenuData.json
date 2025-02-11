@@ -1,0 +1,117 @@
+{
+    "menuSections": [
+      {
+        "category": "Mets Salés",
+        "items": [
+          {
+            "name": "Rolls Nems",
+            "price": "2.20€",
+            "details": [
+              "Poulet Mozzarella",
+              "Potatoes Mozzarella"
+            ]
+          },
+          {
+            "name": "Raviolis",
+            "price": "1.90€",
+            "details": [
+              "Poulet Mozzarella", 
+              "Potatoes Mozzarella"
+            ]
+          },
+          {
+            "name": "Poulet Karaagé",
+            "price": "2.20€",
+            "details": [
+              "Haut de cuisse désossé mariné"
+            ]
+          },
+          {
+            "name": "Mini Burger",
+            "price": "2.20€",
+            "details": [
+              "Mini bun nature, steak haché de bœuf, sauce cocktail, mini cornichon"
+            ]
+          },
+          {
+            "name": "Wrap",
+            "price": "2.20€",
+            "details": [
+              "Jambon poulet",
+              "Saumon (+0.20€)",
+              "Fromage frais",
+              "Tofu curry"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Mets Sucrés",
+        "items": [
+          {
+            "name": "Mini moelleux",
+            "price": "2€"
+          },
+          {
+            "name": "Mini rose au chocolat",
+            "price": "2€"
+          },
+          {
+            "name": "Macaron",
+            "price": "2€"
+          },
+          {
+            "name": "Mini tartelette citron basilic",
+            "price": "2€"
+          }
+        ]
+      },
+      {
+        "category": "Desserts & Boissons",
+        "items": [
+          {
+            "name": "Panacotta",
+            "price": "5€",
+            "details": [
+              "Coulis selon l'humeur du chef"
+            ]
+          },
+          {
+            "name": "Tiramisu",
+            "price": "5€"
+          },
+          {
+            "name": "Boissons",
+            "price": "2.50€",
+            "details": [
+              "Coca-Cola, Coca-Cola zéro, Fuze Tea, Carola bleue et verte"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Poke du Voisin & Amuse Bouche",
+        "items": [
+          {
+            "name": "Riz ou Nooï",
+            "price": "12€",
+            "details": [
+              "Pickles du moment, graines d'édamame, sauce samouraï revisité",
+              "Wings 🌶️",
+              "Meat ball veggie (pois chiches)",
+              "Poulet crispy (aiguillettes de poulet panées aux céréales)",
+              "Saumon mariné à la sauce soja (+2€)"
+            ]
+          },
+          {
+            "name": "Amuse Bouche",
+            "price": "5€",
+            "details": [
+              "Samoussa (x4) - Végétariens",
+              "Brochettes de boulettes de volaille"
+            ]
+          }
+        ]
+      }
+    ]
+  }
