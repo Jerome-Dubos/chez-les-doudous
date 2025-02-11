@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './PrivacyPolicyModal.css';
-import privacyPolicyData from '../../data/PrivacyPolicyData.json';
 
 const PrivacyPolicyModal = ({ isOpen, onClose }) => {
   const [policyData, setPolicyData] = useState(null);
 
   useEffect(() => {
-    setPolicyData(privacyPolicyData);
+    fetch('/data/PrivacyPolicyData.json')
+      .then((response) => response.json())
+      .then((data) => setPolicyData(data))
+      .catch((error) => console.error('Erreur lors du chargement de la politique de confidentialité:', error));
   }, []);
 
   return (

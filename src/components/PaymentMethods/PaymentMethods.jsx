@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { CreditCard, Banknote, Building2, Wifi, Apple } from 'lucide-react';
-import paymentMethodsData from '../../data/paymentMethods.json';
 import './PaymentMethods.css';
 
 const iconMap = {
@@ -16,7 +15,10 @@ const PaymentMethods = () => {
   const [methods, setMethods] = useState([]);
 
   useEffect(() => {
-    setMethods(paymentMethodsData);
+    fetch('/data/paymentMethods.json')
+      .then((response) => response.json())
+      .then((data) => setMethods(data))
+      .catch((error) => console.error('Erreur lors du chargement des méthodes de paiement:', error));
   }, []);
 
   return (

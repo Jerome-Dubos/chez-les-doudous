@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './LegalNoticeModal.css';
-import legalNoticeData from '../../data/LegalNoticeData.json';
 
 const LegalNoticeModal = ({ isOpen, onClose }) => {
   const [noticeData, setNoticeData] = useState(null);
 
   useEffect(() => {
-    setNoticeData(legalNoticeData);
+    fetch('/data/LegalNoticeData.json')
+      .then((response) => response.json())
+      .then((data) => setNoticeData(data))
+      .catch((error) => console.error('Erreur lors du chargement des mentions légales:', error));
   }, []);
 
   return (

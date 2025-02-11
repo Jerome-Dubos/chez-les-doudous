@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import galleryData from '../../data/GalleryData.json';
 import './Gallery.css';
 
 const Gallery = () => {
@@ -9,10 +8,13 @@ const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
-    setImages(galleryData);
+    fetch('/data/GalleryData.json')
+      .then((response) => response.json())
+      .then((data) => setImages(data))
+      .catch((error) => console.error('Erreur lors du chargement de la galerie:', error));
   }, []);
 
-  const categories = ["all", ...new Set(galleryData.map((img) => img.category))];
+  const categories = ["all", ...new Set(images.map((img) => img.category))];
 
   const filteredImages = selectedCategory === "all"
     ? images

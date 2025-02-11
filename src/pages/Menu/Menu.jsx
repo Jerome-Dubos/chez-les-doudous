@@ -1,8 +1,20 @@
-import React from 'react';
-import menuData from '../../data/MenuData.json';
+import React, { useEffect, useState } from 'react';
 import './Menu.css';
 
 const Menu = () => {
+  const [menuData, setMenuData] = useState(null);
+
+  useEffect(() => {
+    fetch('/data/MenuData.json')
+      .then((response) => response.json())
+      .then((data) => setMenuData(data))
+      .catch((error) => console.error('Erreur lors du chargement du menu:', error));
+  }, []);
+
+  if (!menuData) {
+    return <p>Chargement du menu...</p>;
+  }
+
   return (
     <div className="menu-page">
       <h1 className="menu-title">Notre Menu</h1>

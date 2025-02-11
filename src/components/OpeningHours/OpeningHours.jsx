@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './OpeningHours.css';
-import openingHoursData from '../../data/OpeningHours.json';
 
 const OpeningHours = () => {
+  const [openingHours, setOpeningHours] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/OpeningHours.json')
+      .then((response) => response.json())
+      .then((data) => setOpeningHours(data))
+      .catch((error) => console.error('Erreur lors du chargement des horaires d\'ouverture:', error));
+  }, []);
+
   const isCurrentDay = (day) => {
     const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
     return days[new Date().getDay()] === day;
@@ -22,7 +30,7 @@ const OpeningHours = () => {
         <h2>Horaires d'ouverture</h2>
       </div>
       <div className="hours-list">
-        {openingHoursData.map((item, index) => (
+        {openingHours.map((item, index) => (
           <motion.div 
             key={item.day}
             className={`hours-item ${isCurrentDay(item.day) ? 'current' : ''} ${item.open === 'Fermé' ? 'closed' : ''}`}
