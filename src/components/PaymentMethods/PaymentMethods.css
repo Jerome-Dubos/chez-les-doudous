@@ -6,6 +6,23 @@
   padding: 2rem;
   margin: 2rem 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-methods::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+      circle at bottom right, 
+      rgba(255, 193, 7, 0.1), 
+      transparent 70%
+  );
+  z-index: 1;
 }
 
 .payment-methods h2 {
@@ -13,6 +30,8 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .payment-methods h2 .highlight {
@@ -24,6 +43,8 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 
 .method-card {
@@ -36,10 +57,35 @@
   align-items: center;
   justify-content: space-between;
   min-height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.method-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+      circle at center, 
+      rgba(255, 255, 255, 0.1), 
+      transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.method-card:hover::before {
+  opacity: 1;
 }
 
 .method-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .icon-container {
@@ -52,6 +98,13 @@
   border-radius: 50%;
   margin: 0 auto 1rem;
   box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.method-card:hover .icon-container {
+  transform: rotate(360deg);
 }
 
 .payment-icon {
@@ -69,54 +122,56 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
   .methods-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
   }
   
   .method-card {
-    max-width: 120px;
-    flex: 1 1 120px;
-    min-height: 130px;
+      max-width: 120px;
+      flex: 1 1 120px;
+      min-height: 130px;
   }
 
   .icon-container {
-    width: 70px;
-    height: 70px;
+      width: 70px;
+      height: 70px;
   }
 
   .payment-icon {
-    width: 40px;
-    height: 40px;
+      width: 40px;
+      height: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .payment-methods {
-    padding: 1.5rem;
+      padding: 1.5rem;
   }
 
   .payment-methods h2 {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .method-card {
-    max-width: 100px;
-    flex: 1 1 100px;
-    min-height: 120px;
+      max-width: 100px;
+      flex: 1 1 100px;
+      min-height: 120px;
   }
 
   .icon-container {
-    width: 60px;
-    height: 60px;
+      width: 60px;
+      height: 60px;
   }
 
   .payment-icon {
-    width: 30px;
-    height: 30px;
+      width: 30px;
+      height: 30px;
   }
 }

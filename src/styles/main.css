@@ -1,17 +1,69 @@
-/* Reset et styles de base */
+/* Reset et base */
+:root {
+  /* Palette de couleurs enrichie */
+  --color-primary: #0071E3;      /* Bleu vif */
+  --color-secondary: #FFC107;    /* Jaune doré */
+  --color-background: #0A0A0A;   /* Noir profond */
+  --color-surface: rgba(28, 28, 30, 0.85);
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #86868B;
+  --color-accent: #4CAF50;       /* Vert vibrant */
+  
+  /* Typographie moderne */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Échelle typographique */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
+
+  /* Espacement */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Effets visuels */
+  --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 20px rgba(0, 0, 0, 0.2);
+  --shadow-strong: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+  /* Dégradés */
+  --gradient-primary: linear-gradient(
+      135deg, 
+      var(--color-primary) 0%, 
+      color-mix(in srgb, var(--color-primary) 80%, black) 100%
+  );
+  --gradient-secondary: linear-gradient(
+      135deg, 
+      var(--color-secondary) 0%, 
+      color-mix(in srgb, var(--color-secondary) 80%, black) 100%
+  );
+
+  /* Effets de verre avancés */
+  --glass-background: rgba(255, 255, 255, 0.1);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(15px);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -22,210 +74,183 @@ body {
   flex-direction: column;
 }
 
-/* Header */
-.header {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  padding: 1rem 0;
-}
-
-.header nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-.header nav a {
-  color: #f5f5f7;
-  text-decoration: none;
-  font-size: 0.85rem;
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-.header nav a:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* Page d'accueil */
-.home {
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #000, #111);
-  position: relative;
-  overflow: hidden;
-}
-
-.home h1 {
-  font-size: 4rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #fff 0%, #f5f5f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-}
-
-/* Cards sur la page d'accueil */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  padding: 2rem;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Galerie */
-.gallery {
-  padding: 6rem 2rem 2rem;
-  background: #000;
-}
-
-.gallery h1 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  background: linear-gradient(90deg, #fff 0%, #f5f5f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: 1rem;
-  overflow: hidden;
-  background: #1c1c1e;
-  transition: all 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.gallery-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.gallery-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  color: #fff;
-}
-
-/* Footer */
-.footer {
-  background: #1c1c1e;
-  color: #86868b;
-  padding: 2rem;
-  text-align: center;
-  margin-top: auto;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .home h1 {
-    font-size: 2.5rem;
-    padding: 0 1rem;
-  }
-  
-  .cards {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Styles pour la barre de défilement */
-/* Pour Webkit (Chrome, Safari, Edge moderne) */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  border: 1px solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid transparent;
-  background-clip: padding-box;
-}
-
-/* Pour Firefox */
+/* Scrollbar ultra-minimaliste et discret */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+  /* Firefox scrollbar */
+  scrollbar-width: thin;  /* Très fine */
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;  /* Presque invisible */
 }
 
-/* Pour la modale */
-.modal-content::-webkit-scrollbar {
-  width: 4px;
+/* Webkit (Chrome, Safari, Edge moderne) */
+*::-webkit-scrollbar {
+  width: 4px;      /* Largeur minimale */
+  height: 4px;     /* Hauteur minimale */
 }
 
-.modal-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 20px;
+*::-webkit-scrollbar-track {
+  background: transparent;  /* Fond complètement transparent */
 }
 
-.modal-content::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);  /* Très léger, presque invisible */
+  border-radius: 2px;
+  transition: background 0.3s ease;
 }
 
-.modal-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.1);  /* Légèrement plus visible au survol */
+}
+
+/* Pour les modales et contenus scrollables */
+.modal-content::-webkit-scrollbar,
+.scrollable-content::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb,
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Utilitaires de texte */
+.text-gradient {
+  background: var(--gradient-primary);
+  
+  /* Prefixes vendeurs pour background-clip et text-fill-color */
+  -webkit-background-clip: text;  /* Safari 3+ */
+  -moz-background-clip: text;     /* Firefox */
+  -webkit-text-fill-color: transparent;  /* Safari 3+ */
+  -moz-text-fill-color: transparent;     /* Firefox */
+  
+  /* Propriétés standard */
+  background-clip: text;
+  color: transparent;
+
+  /* Fallback pour les navigateurs qui ne supportent pas */
+  @supports not (background-clip: text) {
+      background: var(--color-primary);
+      color: var(--color-primary);
+  }
+}
+
+/* Effet de verre amélioré */
+.glass-morphism {
+  background: var(--glass-background);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
+}
+
+.glass-morphism:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+h1 { 
+  font-size: var(--font-size-4xl); 
+  
+  /* Prefixes vendeurs pour background-clip et text-fill-color */
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;  /* Safari 3+ */
+  -moz-background-clip: text;     /* Firefox */
+  -webkit-text-fill-color: transparent;  /* Safari 3+ */
+  -moz-text-fill-color: transparent;     /* Firefox */
+  
+  /* Propriétés standard */
+  background-clip: text;
+  color: transparent;
+
+  /* Fallback pour les navigateurs qui ne supportent pas */
+  @supports not (background-clip: text) {
+      background: var(--color-primary);
+      color: var(--color-primary);
+  }
+}
+
+h2 { 
+  font-size: var(--font-size-3xl); 
+  color: var(--color-text-primary);
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hover-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.animate-hover-float {
+  animation: hover-float 3s ease infinite;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+      --font-size-base: 0.9rem;
+      --font-size-lg: 1rem;
+      --font-size-xl: 1.25rem;
+      --font-size-2xl: 1.75rem;
+      --font-size-3xl: 2.25rem;
+      --font-size-4xl: 2.5rem;
+  }
+
+  body {
+      font-size: var(--font-size-base);
+  }
+
+  h1 { font-size: var(--font-size-3xl); }
+  h2 { font-size: var(--font-size-2xl); }
+}
+
+/* Modes de couleur */
+@media (prefers-color-scheme: dark) {
+  :root {
+      /* Thème sombre par défaut */
+      color-scheme: dark;
+  }
 }
